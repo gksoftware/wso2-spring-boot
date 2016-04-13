@@ -1,6 +1,6 @@
 debug: true
 server:
-  port: 9999
+  port: 8888
 
 security:
   user:
@@ -26,15 +26,21 @@ spring:
 security:
   oauth2:
     client:
-      accessTokenUri: http://localhost:8080/uaa/oauth/token
-      userAuthorizationUri: http://localhost:8080/uaa/oauth/authorize
-      clientId: acme
-      clientSecret: acmesecret
+      accessTokenUri: http://localhost:9999/uaa/oauth/token
+      userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
+      clientId: gordon
+      clientSecret: gordon
     resource:
       jwt:
         keyValue: |
           -----BEGIN PUBLIC KEY-----
-          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnGp/Q5lh0P8nPL21oMMrt2RrkT9AW5jgYwLfSUnJVc9G6uR3cXRRDCjHqWU5WYwivcF180A6CWp/ireQFFBNowgc5XaA0kPpzEtgsA5YsNX7iSnUibB004iBTfU9hZ2Rbsc8cWqynT0RyN4TP1RYVSeVKvMQk4GT1r7JCEC+TNu1ELmbNwMQyzKjsfBXyIOCFU/E94ktvsTZUHF4Oq44DBylCDsS1k7/sfZC2G5EU7Oz0mhG8+Uz6MSEQHtoIi6mc8u64Rwi3Z3tscuWG2ShtsUFuNSAFNkY7LkLn+/hxLCu2bNISMaESa8dG22CIMuIeRLVcAmEWEWH5EEforTg+QIDAQAB
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3GQnV+yCVWNj8X/perOV
+          U3opPwMX9YnUXbueMNsOYejXF7DFIZvPP2ZeofrQkAwAjW6TC8PVMEJS5RYugjy+
+          chzyBj5sYCyn/vtUst4B4MVrsswO5gFyAXW+RkqySVRI3tU+Y/qRe2pAcDiuJ5V7
+          jybRxneQY0AcHwSF1uoE1FY6DXObSy9bl9xspzLWxIXpmK1a2+E8Ix7Zhs7TtXNJ
+          US1DcP5k48M+KdKgp2dstwJHn//rpC343iXPDnpESqJgWi03bP3idTn10SDmC514
+          Dv2f7l2xQ/ux3GfKqdgmST9VB8/8xwkaX7AOJPMEjo6+8PRnO4uHGPYv+QNtEYE0
+          BwIDAQAB
           -----END PUBLIC KEY-----
       id: openid
       serviceId: ${PREFIX:}resource
@@ -60,8 +66,8 @@ spring:
 security:
   oauth2:
     client:
-      clientId: YpcWf3f0Jw3Wmh6shZLO1yBBSaka
-      clientSecret: YFrt2I4ORMuj1IR8wsGGYbW_3R8a
+      clientId: k3SXxgWd3B5GU2j4uwRHnunQ2P4a
+      clientSecret: mcOOSkTHgybIqBFt_gTfII702t4a
       accessTokenUri: https://wso2idserver.local:9443/oauth2/token
       userAuthorizationUri: https://wso2idserver.local:9443/oauth2/authorize
       scope: openid
